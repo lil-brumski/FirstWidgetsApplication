@@ -1,0 +1,11 @@
+out/
+
+build/
+
+CMakeUserPresets.json
+
+*.aps
+
+.vs/
+
+.vscode/
