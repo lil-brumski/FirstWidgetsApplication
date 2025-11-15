@@ -10,25 +10,23 @@ int main(int argc, char** argv) {
 	QApplication app(argc, argv);
 
 	QWidget window;
-	window.resize(1024, 600);
-	window.setWindowTitle(QApplication::translate("hi", "Brumski's First Qt6 Application"));
 
 	QList<QPushButton*> buttons = {
-		new QPushButton(QApplication::translate("hi", "Submit")),
-		new QPushButton(QApplication::translate("hi", "Submit")),
-		new QPushButton(QApplication::translate("hi", "Submit"))
+		new QPushButton(QApplication::translate("hi", "Submit"), &window),
+		new QPushButton(QApplication::translate("hi", "Submit"), &window),
+		new QPushButton(QApplication::translate("hi", "Submit"), &window)
 	};
 	
 	QList<QLabel*> listOfLabels = {
-		new QLabel("Name"),
-		new QLabel("Department"),
-		new QLabel("Matriculation Number")
+		new QLabel("Name", &window),
+		new QLabel("Department", &window),
+		new QLabel("Matriculation Number", &window)
 	};
 	
 	QList<QLineEdit*> LElists = {
-		new QLineEdit(),
-		new QLineEdit(),
-		new QLineEdit()
+		new QLineEdit(&window),
+		new QLineEdit(&window),
+		new QLineEdit(&window)
 	}; 
 
 	LElists[0]->setPlaceholderText(QApplication::translate("hi", "Enter your name"));
@@ -56,6 +54,8 @@ int main(int argc, char** argv) {
 	LOMAIN->addLayout(LO3);
 	
 	window.setLayout(LOMAIN);
+	window.resize(1024, 600);
+	window.setWindowTitle(QApplication::translate("hi", "Brumski's First Qt6 Application"));
 	window.show();
 
 	return app.exec();
