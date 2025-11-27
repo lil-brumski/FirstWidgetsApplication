@@ -6,9 +6,10 @@
 #include <QVBoxLayout>
 #include <QList>
 
+void FirstWA();
+
 int main(int argc, char** argv) {
 	QApplication app(argc, argv);
-
 	QWidget window;
 
 	QList<QPushButton*> buttons = {
@@ -16,18 +17,18 @@ int main(int argc, char** argv) {
 		new QPushButton(QApplication::translate("hi", "Submit"), &window),
 		new QPushButton(QApplication::translate("hi", "Submit"), &window)
 	};
-	
+
 	QList<QLabel*> listOfLabels = {
 		new QLabel("Name", &window),
 		new QLabel("Department", &window),
 		new QLabel("Matriculation Number", &window)
 	};
-	
+
 	QList<QLineEdit*> LElists = {
 		new QLineEdit(&window),
 		new QLineEdit(&window),
 		new QLineEdit(&window)
-	}; 
+	};
 
 	LElists[0]->setPlaceholderText(QApplication::translate("hi", "Enter your name"));
 	LElists[1]->setPlaceholderText(QApplication::translate("hi", "Enter your department"));
@@ -52,11 +53,10 @@ int main(int argc, char** argv) {
 	LOMAIN->addLayout(LO1);
 	LOMAIN->addLayout(LO2);
 	LOMAIN->addLayout(LO3);
-	
+
 	window.setLayout(LOMAIN);
 	window.resize(1024, 600);
 	window.setWindowTitle(QApplication::translate("hi", "Brumski's First Qt6 Application"));
 	window.show();
-
 	return app.exec();
 }

@@ -49,4 +49,25 @@ target_link_libraries(${PROJECT_NAME}
         Qt::Gui
         Qt::Widgets
 )
+
+## FOR second.exe
+set(SECOND_PROJECT_SOURCES
+    second.cpp
+    second.hpp
+    second.rc
+)
+
+qt_add_executable(second ${SECOND_PROJECT_SOURCES})
+
+set_target_properties(second
+    PROPERTIES
+        WIN32_EXECUTABLE TRUE
+)
+
+target_link_libraries(second
+    PUBLIC
+        Qt::Core
+        Qt::Gui
+        Qt::Widgets
+)
 #target_precompile_headers(${PROJECT_NAME} PUBLIC stdafx.h)

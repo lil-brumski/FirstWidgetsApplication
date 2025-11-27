@@ -9,3 +9,5 @@ CMakeUserPresets.json
 .vs/
 
 .vscode/
+
+*.jpg
