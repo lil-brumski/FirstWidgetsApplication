@@ -10,4 +10,6 @@ CMakeUserPresets.json
 
 .vscode/
 
+.qtcreator/
+
 *.jpg

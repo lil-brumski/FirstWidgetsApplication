@@ -14,6 +14,8 @@ public:
 	Second(QWidget* parent = nullptr);
 	~Second();
 private:
+    QLabel* myFace;
+
 	QLabel* name;
 	QLabel* department;
 	QLabel* matNo;
