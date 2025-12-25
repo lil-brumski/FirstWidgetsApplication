@@ -3,6 +3,7 @@
 #include <QWidget>
 #include <QPushButton>
 #include <QLabel>
+#include <QMovie>
 #include <QLineEdit>
 #include <QHBoxLayout>
 #include <QVBoxLayout>

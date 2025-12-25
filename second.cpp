@@ -7,9 +7,14 @@ Second::Second(QWidget* parent) : QWidget(parent) {
 
     ///
     myFace = new QLabel(this);
-    myFace->setGeometry(0, 0, 100, 100);
+    myFace->setGeometry(325, 0, 150, 100);
     myFace->setPixmap(QPixmap(":/images/myFace.png"));
     myFace->setScaledContents(true);
+    /*
+    QMovie* movie = new QMovie(":/media/LearningQWidgets.gif");
+    myFace->setMovie(movie);
+    movie->start();
+    */
     ///
 
     ///

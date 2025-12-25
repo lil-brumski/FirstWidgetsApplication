@@ -49,9 +49,8 @@ set(SECOND_PROJECT_SOURCES
 )
 
 qt_add_resources(SECOND_PROJECT_SOURCES second.qrc)
-qt_add_executable(second ${SECOND_PROJECT_SOURCES})
 
-#qt_add_resources(second "app_images")
+qt_add_executable(second ${SECOND_PROJECT_SOURCES})
 
 set_target_properties(second
     PROPERTIES
